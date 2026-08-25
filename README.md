@@ -180,8 +180,8 @@ docker run -p 8000:8000 --env-file .env helixdesk
 HelixDesk is deployed on Render and accessible at:
 
 ```
-https://multi-agent-system-planning.onrender.com/api/v1/docs    # Swagger UI
-https://multi-agent-system-planning.onrender.com/healthz         # Health Check
+https://helixdesk.onrender.com/api/v1/docs    # Swagger UI
+https://helixdesk.onrender.com/healthz         # Health Check
 ```
 
 **Deploy to Render (no credit card required):**

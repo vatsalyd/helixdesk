@@ -18,7 +18,7 @@ Deploy HelixDesk to production on Render (free tier). Auto-deploy on push requir
 
 ## Output Definition
 - Format: Running Render web service container (Docker, 512MB RAM, 0.1 CPU, free tier)
-- Quality bar: Health check returns 200, API docs accessible at `https://multi-agent-system-planning.onrender.com/api/v1/docs`
+- Quality bar: Health check returns 200, API docs accessible at `https://helixdesk.onrender.com/api/v1/docs`
 - Destination: Render free tier (scales to zero after 15min idle, cold start ~30-50s)
 
 ## Step-by-Step Process
@@ -29,7 +29,7 @@ Deploy HelixDesk to production on Render (free tier). Auto-deploy on push requir
 5. Render builds Docker image, starts container on port from `$PORT` env var (8000)
 6. Startup runs ingestion: `python -m app.rag.ingest` (creates index if missing, idempotent)
 7. Health check verifies `/api/v1/health` with Pinecone connectivity
-8. App available at `https://multi-agent-system-planning.onrender.com`
+8. App available at `https://helixdesk.onrender.com`
 
 ## Required GitHub Secrets
 None for CI (tests use mocked LLMs).
@@ -96,6 +96,6 @@ git push origin main
 
 ## Keep-Alive (Optional)
 To prevent 15min idle spin-down and eliminate cold starts:
-- Add a free cron job (cron-job.org, cronjob.run, UptimeRobot) hitting `https://multi-agent-system-planning.onrender.com/healthz` every 30 minutes
+- Add a free cron job (cron-job.org, cronjob.run, UptimeRobot) hitting `https://helixdesk.onrender.com/healthz` every 30 minutes
 - Costs ~240 hrs/mo of 750 hrs free budget
 - No code changes needed — purely external config
