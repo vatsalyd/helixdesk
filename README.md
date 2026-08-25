@@ -4,7 +4,7 @@
 
 **Autonomous multi-agent system that triages, researches, and resolves enterprise support tickets in seconds — not hours.**
 
-[![CI Pipeline](https://github.com/vatsalyd/Multi-Agent-System-Planning/actions/workflows/deploy.yml/badge.svg)](https://github.com/vatsalyd/Multi-Agent-System-Planning/actions)
+[![CI Pipeline](https://github.com/vatsalyd/helixdesk/actions/workflows/deploy.yml/badge.svg)](https://github.com/vatsalyd/helixdesk/actions)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
@@ -90,8 +90,8 @@ If the Triage Agent's confidence falls below **50%**, the ticket is automaticall
 
 ```bash
 # Clone the repository
-git clone https://github.com/vatsalyd/Multi-Agent-System-Planning.git
-cd Multi-Agent-System-Planning
+git clone https://github.com/vatsalyd/helixdesk.git
+cd helixdesk
 
 # Create and activate virtual environment
 python -m venv .venv
@@ -187,7 +187,7 @@ https://multi-agent-system-planning.onrender.com/healthz         # Health Check
 **Deploy to Render (no credit card required):**
 
 1. Create a [Render account](https://dashboard.render.com/register)
-2. New → Web Service → Connect your GitHub repo (`vatsalyd/Multi-Agent-System-Planning`)
+2. New → Web Service → Connect your GitHub repo (`vatsalyd/helixdesk`)
 3. Keep defaults (Render auto-detects Python from `requirements.txt`):
    - **Build:** `pip install -r requirements.txt`
    - **Start:** `python -m app.rag.ingest; uvicorn app.main:app --host 0.0.0.0 --port $PORT`
